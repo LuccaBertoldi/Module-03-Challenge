@@ -6,16 +6,18 @@ const collectEmployees = function() {
   const employeesArray = [];
   // Create prompts to the user add the data
   while (true) {
-    const firstName = prompt("Enter first:");
+    const firstName = prompt("Enter first name:");
     if (!firstName) {
       break; // Exit the loop if Cancel is clicked
     }
     const lastName = prompt("Enter last name:");
     let salary = parseFloat(prompt("Enter salary:"));
+
     // Validate if salary is a number, if not salary = 0
     if (isNaN(salary)) {
        salary = 0;
     }
+
     // Create an employee object and add it to the array
     const employee = {
       firstName: firstName,
